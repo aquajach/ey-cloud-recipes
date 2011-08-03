@@ -2,7 +2,7 @@
 # Cookbook Name:: mongodb
 # Recipe:: default
 #
-
+require_recipe "mongodb"
 # Setup an arbiter on the db_master|solo as replica sets need another vote to properly failover.  If you have a Replica set > 3 nodes we don't set this up, you can tune this obviously.
 case node[:kernel][:machine]
 when "i686"
